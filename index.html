@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laugh & Learn</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+
+    <div id="top-text">Tap me to laugh & learn!</div>
+
+    <img src="images/Character.png" id="character" alt="Cheese Character" />
+
+    <div id="word-box">
+      <h2 id="word">Word</h2>
+      <p id="definition">Definition appears here</p>
+    </div>
+
+    <button id="toggle-history">📜 Show History</button>
+    <div id="history-box" class="collapsed">
+      <h3>History</h3>
+      <ul id="history-list"></ul>
+    </div>
+
+    <div id="laugh-container"></div>
+    <div id="word-popup" class="word-fade">Word</div>
+
+  </div>
+
+  <audio id="laugh-sound" src="sounds/laugh.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

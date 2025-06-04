@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', sans-serif;
+    background: #fff8dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .game-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #top-text {
+    font-size: 20px;
+    color: #f57c00;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+  
+  #character {
+    width: 80%;
+    max-width: 250px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  #character:active {
+    transform: scale(1.05);
+  }
+  
+  #word-box {
+    margin-top: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  #word {
+    color: #007acc;
+    font-size: 26px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+  
+  #definition {
+    font-size: 18px;
+    color: #333;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+  
+  #toggle-history {
+    margin-top: 20px;
+    background-color: #f57c00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+  
+  #history-box {
+    margin-top: 15px;
+    background: #fff3e0;
+    padding: 15px;
+    border-radius: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  #history-box.expanded {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  #history-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    margin-top: 10px;
+  }
+  
+  #history-list li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #444;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  }
+  
+  .floating-text {
+    position: absolute;
+    font-weight: bold;
+    color: #ff4081;
+    pointer-events: none;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    animation: floatDown 1.5s ease forwards;
+    white-space: nowrap;
+  }
+  
+  @keyframes floatDown {
+    0% {
+      transform: translateY(-50px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  }
+  
+  .word-fade {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffdd;
+    border: 2px solid #007acc;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  #laugh-container {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
